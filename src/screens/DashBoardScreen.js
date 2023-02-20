@@ -11,18 +11,20 @@ const DashBoardScreen = () => {
     <View>
       <LinearGradient colors={['#FF325F', '#d698a4']} style={styles.container}>
       <View style={styles.container2}>
-      <View style={styles.container1}> 
+      <Pressable style={styles.container1} onPress={() => {
+          navigation.navigate("Complaint");}}> 
       <MaterialIcons name="report" size={60} color='#FF325F'/>
       <View style={styles.underline}>
       <Text style={styles.text2}> File a complaint </Text>
       </View>
-      </View>
-      <View style={styles.container1}> 
+      </Pressable>
+      <Pressable style={styles.container1} onPress={() => {
+          navigation.navigate("track");}}> 
       <MaterialIcons name="track-changes" size={60} color='#FF325F'/>
       <View style={styles.underline}>
       <Text style={styles.text2}> Track a complaint </Text>
       </View>
-      </View>
+      </Pressable>
       </View>
     </LinearGradient>
     <View style={styles.container3}>
@@ -30,7 +32,8 @@ const DashBoardScreen = () => {
       <CustomPressable text={"File a complaint"} backgroundColor="#9274f6"  onPress={() => {
           navigation.navigate("Complaint");}
       }/>
-      <CustomPressable text={"Track a complaint"} backgroundColor="#f44236"/>
+      <CustomPressable text={"Track a complaint"} backgroundColor="#f44236" onPress={() => {
+          navigation.navigate("track");}}/>
       <CustomPressable text={"About the initiative"} backgroundColor="#f7a93a" onPress={() => {
           navigation.navigate("about");}}/>
       <CustomPressable text={"FAQ"} backgroundColor="#33f7a1" onPress={() => {

@@ -11,6 +11,7 @@ import DrawerScreen from './DrawerScreen';
 import Complaint from '../screens/Complaint';
 import AboutScreen from '../screens/AboutScreen';
 import FaqScreen from '../screens/FaqScreen';
+import TrackScreen from '../screens/TrackScreen';
 const Stack = createNativeStackNavigator();
 
 const AppNavigator = () => {
@@ -83,6 +84,20 @@ const AppNavigator = () => {
       component={FaqScreen}
       options={{ 
         title:'Frequently Asked Questions',
+            headerStyle: {
+              backgroundColor: '#FF325F',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+       }}
+    />
+    <Stack.Screen
+      name="track"
+      component={TrackScreen}
+      options={{ 
+        title:'Track a complaint',
             headerStyle: {
               backgroundColor: '#FF325F',
             },
